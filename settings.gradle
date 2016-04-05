@@ -1,0 +1,3 @@
+rootProject.name = "common-test"
+
+include "common-test-base"
