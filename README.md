@@ -1,2 +1,0 @@
-# common-test
-common-test
