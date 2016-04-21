@@ -1,4 +1,4 @@
-package com.baidu.hui.common.mq;
+package com.baidu.hui.common.test.biz.mq;
 
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
