@@ -100,12 +100,15 @@ subprojects {
 		compile "org.apache.geronimo.specs:geronimo-j2ee-connector_1.5_spec:2.0.0"
 		compile "org.apache.activemq:activemq-all:5.5.0"
 		
+		compile "com.alibaba:fastjson:1.2.9"
+		
 		testCompile "org.springframework:spring-test:${springVersion}"
 		testCompile "org.jmock:jmock-junit4:2.6.0"
 		testCompile "junit:junit:4.11"
 		testCompile "org.dbunit:dbunit:2.4.9"
 		
-		compile fileTree(dir: libDir, include: '*.jar')
+		compile fileTree(dir: libDir, include: '*.jar')	
+		
 	}
 
 	
