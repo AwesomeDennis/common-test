@@ -217,5 +217,12 @@ project('common-test-biz') {
 	defaultTasks 'clean', 'uploadArchives'
 }
 
+project('common-test-service') {
+	dependencies {	
+		compile project(':common-test-base')
+		compile project(':common-test-biz')
+	}	
+	defaultTasks 'clean', 'uploadArchives'
+}
 
 defaultTasks 'clean', 'jar', 'zip','uploadArchives'
