@@ -1,5 +1,9 @@
 #
+<<<<<<< HEAD
 #Fri Jun 17 15:56:29 CST 2016
+=======
+#Mon May 16 11:12:08 CST 2016
+>>>>>>> branch 'master' of https://github.com/yinhaomin/common-test.git
 org.eclipse.jdt.core.compiler.debug.localVariable=generate
 org.eclipse.jdt.core.compiler.compliance=1.6
 org.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve

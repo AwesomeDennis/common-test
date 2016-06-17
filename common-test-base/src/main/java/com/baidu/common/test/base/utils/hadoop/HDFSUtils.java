@@ -20,9 +20,10 @@ public class HDFSUtils {
      * @throws IOException
      */
     public static void readFromHdfs() throws FileNotFoundException, IOException {
-        String dst = "hdfs://yq01-wutai-hdfs.dmop.baidu.com:54310/app/ecom/cm/offline_dc/tmp/hello.txt";
-        Configuration conf = new Configuration();
-        FileSystem fs = FileSystem.get(URI.create(dst), conf);
+        String dst = "hdfs://machinename:54310/app/ecom/cm/offline_dc/tmp/hello.txt";
+        Configuration configuration = new Configuration();
+        configuration.set("hadoop.job.ugi", "username,passport");
+        FileSystem fs = FileSystem.get(URI.create(dst), configuration);
         FSDataInputStream hdfsInStream = fs.open(new Path(dst));
 
         OutputStream out = new FileOutputStream("d:/qq-hdfs.txt");
