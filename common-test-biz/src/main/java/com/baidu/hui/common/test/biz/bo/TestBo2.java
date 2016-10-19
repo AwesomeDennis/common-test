@@ -5,7 +5,7 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-public class TestBo {
+public class TestBo2 {
 
     private long id;
 

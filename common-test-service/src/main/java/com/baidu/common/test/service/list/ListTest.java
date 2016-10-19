@@ -36,7 +36,7 @@ public class ListTest {
 
         String[] dataArray = cateStr.split(".");
         List<MidwayWhiteCatBo> midwayCatWhitelist = new ArrayList<MidwayWhiteCatBo>();
-        Collections.addAll(midwayCatWhitelist, dataArray);
+//        Collections.addAll(midwayCatWhitelist, dataArray);
         System.out.println(midwayCatWhitelist);
 
     }
