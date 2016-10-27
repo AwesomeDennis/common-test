@@ -227,4 +227,59 @@ project('common-test-service') {
 	defaultTasks 'clean', 'uploadArchives'
 }
 
+project('common-test-web') {
+    apply plugin: 'war'
+    apply plugin: 'jetty'
+    
+    sourceSets {
+        main {
+            java {
+                srcDir 'src/main/java'
+            }
+            resources {
+                srcDir 'src/main/configure'
+            }
+        }
+        test {
+            java {
+                srcDir 'src/test/java'
+            }
+            resources {
+                srcDir 'src/main/configure'
+                srcDir 'src/test/configure'
+            }
+        }
+    }
+
+    dependencies {
+        compile project(':common-test-base')
+        compile project(':common-test-biz')
+        compile project(':common-test-service')
+        compile "org.springframework:spring-web:${springVersion}"
+        compile "org.springframework:spring-webmvc:${springVersion}"
+        compile "org.springframework:spring-oxm:${springVersion}"
+        compile "org.quartz-scheduler:quartz:2.2.1"
+    }
+
+    war {
+        def useConf = 'dev'
+        if (project.hasProperty('profile')) {
+            useConf = "${profile}"
+        }
+        from "src/main/conf/${useConf}/omp"
+        destinationDir = file('output')
+        webInf {
+            into('classes') {
+                from('src/main/WEB-INF/web.xml')
+            }
+        }
+        webInf {
+            into('classes') {
+                from('src/main/configure')
+            }
+        }
+    }
+    defaultTasks 'clean', 'war', 'uploadArchives'
+}
+
 defaultTasks 'clean', 'jar', 'zip','uploadArchives'
