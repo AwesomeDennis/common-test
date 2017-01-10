@@ -12,8 +12,14 @@ public class StringBuilderBufferTest {
         sb.append("12345678901234567890");
         System.out.println(sb.capacity());
         System.out.println(sb.length());
-
-        String str = new String("df");
+        
+        
+        String str = "";
+        str.concat("");
+        // System.out.println(str.charAt(0));
+        char[] data = new char[0];
+        System.out.println(data.length);
+        System.out.println(str.length());
 
     }
 
@@ -29,6 +35,6 @@ public class StringBuilderBufferTest {
         System.out.println(sb.length());
 
         String str = new String("df");
-
     }
+
 }
