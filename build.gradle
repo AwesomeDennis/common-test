@@ -32,10 +32,7 @@ subprojects {
 	
 	buildscript {
 		repositories {
-			maven{ url 'http://maven.scm.baidu.com:8081/nexus/content/groups/public/'}
-			maven{ url 'http://maven.scm.baidu.com:8081/nexus/content/repositories/Baidu_Local_Snapshots'}
-			maven{ url 'http://maven.scm.baidu.com:8081/nexus/content/repositories/Baidu_Local'}
-			mavenLocal()
+
 		}
 		configurations.all {
 			resolutionStrategy {
@@ -132,9 +129,6 @@ subprojects {
 	}
 
 	repositories {
-		maven{ url 'http://maven.scm.baidu.com:8081/nexus/content/groups/public/'}
-		maven{ url 'http://maven.scm.baidu.com:8081/nexus/content/repositories/Baidu_Local_Snapshots'}
-		maven{ url 'http://maven.scm.baidu.com:8081/nexus/content/repositories/Baidu_Local'}
 		mavenLocal()
 	}
 	
