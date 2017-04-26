@@ -31,7 +31,7 @@ public class TransactionManager {
             transactionStatus.setSuccess();
         } catch (Exception e) {
             log.error(transaction.getTransactionName() + " gets exception when executing, start to rollback", e);
-            transactionContext.setFailedOperation(transaction.getErrorOperation());
+            //transactionContext.setFailedOperation(transaction.getErrorOperation());
             transactionStatus.setRollbackOnly();
             transaction.rollback(transactionContext);
         }
